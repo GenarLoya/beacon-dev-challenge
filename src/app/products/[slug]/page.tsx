@@ -1,6 +1,7 @@
 import { IProduct } from "~/models/products";
 import { findProduct } from "./_services/findProduct.service";
 import { ProductItem } from "../_components/ProductItem";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -12,7 +13,7 @@ export default async function Page({
   const product = await findProduct({ slug });
 
   if (!product) {
-    return "NOT FOUND";
+    return notFound();
   }
 
   return <ProductItem product={product}></ProductItem>;
