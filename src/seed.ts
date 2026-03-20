@@ -2,8 +2,7 @@ import "dotenv/config";
 import mongoose from "mongoose";
 
 const MONGODB_URI =
-  process.env.MONGODB_URI ??
-  "mongodb://localhost:27017/beacon-dev-challenge";
+  process.env.MONGODB_URI ?? "mongodb://localhost:27017/beacon-dev-challenge";
 
 // ─── Product Shape ──────────────────────────────────────────────────────────
 // This is the schema candidates should replicate in their Mongoose model.
@@ -343,8 +342,7 @@ const products = [
     category: "dispositivos-medicos",
     brand: "VitalCheck",
     stock: 35,
-    image:
-      "https://placehold.co/400x400/EBF5FB/2980B9?text=BP+Monitor",
+    image: "https://placehold.co/400x400/EBF5FB/2980B9?text=BP+Monitor",
     requiresPrescription: false,
   },
   {
@@ -356,8 +354,7 @@ const products = [
     category: "dispositivos-medicos",
     brand: "TempSafe",
     stock: 90,
-    image:
-      "https://placehold.co/400x400/FDEDEC/E74C3C?text=Thermometer",
+    image: "https://placehold.co/400x400/FDEDEC/E74C3C?text=Thermometer",
     requiresPrescription: false,
   },
   {
@@ -381,8 +378,7 @@ const products = [
     category: "dispositivos-medicos",
     brand: "GlucoBalance",
     stock: 4,
-    image:
-      "https://placehold.co/400x400/FEF9E7/D4AC0D?text=Glucose+Monitor",
+    image: "https://placehold.co/400x400/FEF9E7/D4AC0D?text=Glucose+Monitor",
     requiresPrescription: false,
   },
   {
