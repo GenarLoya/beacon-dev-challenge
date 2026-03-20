@@ -16,7 +16,7 @@ export async function searchProducts({
   if (query) {
     filter.name = {
       $regex: query,
-      $options: "i", // case insensitive
+      $options: "i",
     };
   }
 

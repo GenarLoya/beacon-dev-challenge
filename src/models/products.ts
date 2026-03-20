@@ -1,15 +1,12 @@
 import mongoose from "mongoose";
+import { TCategory } from "~/constants/categories";
 
 export interface IProduct extends mongoose.Document {
   name: string;
   slug: string;
   description: string;
   price: number;
-  category:
-    | "medicamentos"
-    | "suplementos"
-    | "cuidado-personal"
-    | "dispositivos-medicos";
+  category: TCategory;
   brand: string;
   stock: number;
   image: string;
@@ -18,7 +15,7 @@ export interface IProduct extends mongoose.Document {
   updatedAt: Date;
 }
 
-export const ProductDef = new mongoose.Schema(
+export const ProductDef = new mongoose.Schema<IProduct>(
   {
     name: { type: String, required: true },
     slug: { type: String, required: true, unique: true },

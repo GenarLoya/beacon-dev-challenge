@@ -10,7 +10,7 @@ export function ProductsList({ products }: { products: IProduct[] }) {
       {products.map((product) => (
         <ProductItem
           onClick={() => {
-            router.push(`/products/${product._id}`);
+            router.push(`/products/${product.slug}`);
           }}
           key={product._id.toString()}
           product={product}
