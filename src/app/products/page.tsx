@@ -5,7 +5,7 @@ import SearchPanel from "./client";
 export default async function Page({
   searchParams,
 }: {
-  searchParams: TsearchParamsDto;
+  searchParams: Promise<TsearchParamsDto>;
 }) {
   const validatedParams = searchProductsDto.safeParse(await searchParams);
 
